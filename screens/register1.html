@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="../style/index.css" />
+  </head>
+  <body style="height: 100vh;">
+    <nav>
+      <a style="text-decoration: none; color: white;" href="../index.html"
+        ><div class="brand">LOVE</div></a
+      >
+      <div class="nav">
+        COMMUNITY CHURCH
+      </div>
+    </nav>
+    <div class="main">
+      <form name='reg1' method="GET" action="" id="reg1">
+        <h3 class="head">Resgister for 1st Service</h3>
+        <input class="input" placeholder="Full Name" />
+        <input class="input" placeholder="City/Town" />
+        <input type="tel" class="input" placeholder="Phone Number" />
+        <button type="submit" class="button" id="sub1">Submit</button>
+      </form>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+    <script src="../firebase/config.js"></script>
+    <script src='../js/index1.js'></script>
+  </body>
+</html>
