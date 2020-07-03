@@ -6,25 +6,41 @@
     <title>Succesful</title>
     <link rel="stylesheet" href="../style/index.css" />
   </head>
-  <body style="height: 100vh;">
+  <body style="height: 100vh; overflow: hidden;">
     <nav>
-      <a style="text-decoration: none; color: white;" href="../index.html"
-        ><div class="brand">LOVE</div></a
-      >
-      <div class="nav">
-        COMMUNITY CHURCH
+      <div>
+        <a style="text-decoration: none; color: white;" href="../index.html"
+          ><div class="brand">LOVE</div></a
+        >
+        <div class="nav">
+          COMMUNITY CHURCH
+        </div>
+      </div>
+      <div>
+        <img src="../assets/log.png" class="logo" />
       </div>
     </nav>
-    <div class="main">
+
+    <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
       <!-- <p class="heading">Please select a service you'll like to attend.</p> -->
 
-      <h2 style="text-align: center;" class="thank">
+      <h2 style="text-align: center; margin-top: -70px;" class="thank">
         Thank you! <br />
         Your Seat Number:
-        <span
-          id="seat"
-          style="background-color: lawngreen; width: 150px; text-align: center;"
-        ></span>
+        <div>
+          <span
+            id="seat"
+            style="
+              background-color: gold;
+              width: 150px;
+              text-align: center;
+              color: #2a265f;
+              padding-left: 20px;
+              padding-right: 20px;
+            "
+            >2</span
+          >
+        </div>
       </h2>
     </div>
     <script src="../js/jquery.js"></script>
@@ -34,7 +50,9 @@
         var sid = prmstr[1];
         var args = JSON.parse(sessionStorage.getItem(sid));
         console.log(args);
-        document.getElementById('seat').innerHTML = JSON.parse(sessionStorage.getItem(sid)).data
+        document.getElementById("seat").innerHTML = JSON.parse(
+          sessionStorage.getItem(sid)
+        ).data;
         sessionStorage.removeItem(sid);
         // and so on
       });
