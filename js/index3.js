@@ -12,23 +12,33 @@ reg3.addEventListener("submit", (event) => {
   console.log(name, city, phone);
 
   firebase
-  .database()
-  .ref("Argon/week1")
-  .push()
-  .set(
-    {
-      name: name,
-      city: city,
-      phone: phone,
-      service: 'third',
-      date: Date.now()
-    },
-    (error) => {
-      if (error) {
-        alert(error.message);
-      } else {
-        window.open("../screens/thank.html", "_self");
+    .database()
+    .ref("Argon/week1")
+    .push()
+    .set(
+      {
+        name: name,
+        city: city,
+        phone: phone,
+        service: "third",
+        date: Date.now(),
+      },
+      (error) => {
+        if (error) {
+          alert(error.message);
+        } else {
+          firebase
+            .database()
+            .ref("Argon/week1")
+            .on("value", (snapshot) => {
+              let array = [];
+              snapshot.forEach((child) => {
+                array.push(child.toJSON());
+              });
+              $("#seat").innerHTML = array.length;
+              window.open("../screens/thank.html", "_self");
+            });
+        }
       }
-    }
-  );
+    );
 });

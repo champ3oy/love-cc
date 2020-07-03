@@ -24,11 +24,20 @@
         <span
           id="seat"
           style="background-color: lawngreen; width: 150px; text-align: center;"
-          ></span
-        >
+        ></span>
       </h2>
     </div>
-
-    <script src="../js/index.js"></script>
+    <script src="../js/jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        var prmstr = window.location.search.split("=");
+        var sid = prmstr[1];
+        var args = JSON.parse(sessionStorage.getItem(sid));
+        console.log(args);
+        document.getElementById('seat').innerHTML = JSON.parse(sessionStorage.getItem(sid)).data
+        sessionStorage.removeItem(sid);
+        // and so on
+      });
+    </script>
   </body>
 </html>

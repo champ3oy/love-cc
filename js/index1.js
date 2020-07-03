@@ -20,14 +20,32 @@ reg1.addEventListener("submit", (event) => {
         name: name,
         city: city,
         phone: phone,
-        service: 'first',
-        date: Date.now()
+        service: "first",
+        date: Date.now(),
       },
       (error) => {
         if (error) {
           alert(error.message);
         } else {
-          window.open("../screens/thank.html", "_self");
+          firebase
+            .database()
+            .ref("Argon/week1")
+            .on("value", (snapshot) => {
+              let array = [];
+              snapshot.forEach((child) => {
+                array.push(child.toJSON());
+              });
+              // document.getElementById("seat").innerHTML = array.length;
+              var storageId = "parms" + String(Date.now());
+              sessionStorage.setItem(
+                storageId,
+                JSON.stringify({ data: array.length })
+              );
+              window.open(
+                "../screens/thank.html" + "?sid=" + storageId,
+                "_self"
+              );
+            });
         }
       }
     );
