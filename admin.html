@@ -10,6 +10,16 @@
       type="text/css"
       href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css"
     />
+    <script>
+      function printcontent(print_target_content){
+  var restore_page=document.body.innerHTML;
+  var print_div_content=document.getElementById(print_target_content).innerHTML;
+  document.body.innerHTML=print_div_content;
+   window.print();
+   document.body.innerHTML=restore_page;
+
+}
+    </script>
   </head>
   <body style="height: 100vh; background: white;">
     <nav>
@@ -31,6 +41,7 @@
       >
         <button
           id="print"
+          onclick="printcontent('print_target_content')"
           style="
             width: 120px;
             height: 40px;
@@ -45,31 +56,33 @@
           Print
         </button>
       </div>
-      <div id="tablewrap">
-      <table id="example" class="display" style="width: 100%;">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Service</th>
-            <th>Phone Number</th>
-            <th>City/Town</th>
-            <th>Booking Date</th>
-          </tr>
-        </thead>
-        <tbody id="tab">
-          
-        </tbody>
-        <tfoot>
-          <tr>
-            <th>Name</th>
-            <th>Service</th>
-            <th>Phone Number</th>
-            <th>City/Town</th>
-            <th>Booking Date</th>
-          </tr>
-        </tfoot>
-      </table>
-    </div>
+      <div id="print_target_content">
+        <div id="tablewrap">
+          <table id="example" class="display" style="width: 100%;">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Service</th>
+                <th>Phone Number</th>
+                <th>City/Town</th>
+                <th>Booking Date</th>
+              </tr>
+            </thead>
+            <tbody id="tab">
+              
+            </tbody>
+            <tfoot>
+              <tr>
+                <th>Name</th>
+                <th>Service</th>
+                <th>Phone Number</th>
+                <th>City/Town</th>
+                <th>Booking Date</th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
     </div>
     <script src="./js/jquery.js"></script>
 
