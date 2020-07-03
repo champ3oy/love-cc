@@ -17,8 +17,17 @@ window.addEventListener("load", () => {
             item.phone +
             "</td> <td style='text-align: center'>" +
             item.city +
-        `</td> <td style="text-align: center">${new Date(item.date)}</td> </tr>`
+            `</td> <td style="text-align: center">${new Date(
+              item.date
+            )}</td> </tr>`
         );
       });
     });
+});
+
+document.getElementById("print").addEventListener("click", () => {
+  var url =
+    "data:application/vnd.ms-excel," + encodeURIComponent($("#tablewrap").html());
+  location.href = url;
+  return false;
 });

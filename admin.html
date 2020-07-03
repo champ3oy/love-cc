@@ -10,16 +10,6 @@
       type="text/css"
       href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css"
     />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.datatables.net/responsive/2.2.5/css/responsive.dataTables.min.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css"
-    />
   </head>
   <body style="height: 100vh; background: white;">
     <nav>
@@ -31,6 +21,31 @@
       </div>
     </nav>
     <div style="padding: 20px;">
+      <div
+        style="
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          margin-bottom: 20px;
+        "
+      >
+        <button
+          id="print"
+          style="
+            width: 120px;
+            height: 40px;
+            border: none;
+            background-color: #2a265f;
+            color: white;
+            font-size: 18px;
+            letter-spacing: 2px;
+            cursor: pointer;
+          "
+        >
+          Print
+        </button>
+      </div>
+      <div id="tablewrap">
       <table id="example" class="display" style="width: 100%;">
         <thead>
           <tr>
@@ -45,6 +60,11 @@
           <!-- <td style="text-align: center; font-weight: bold;">
             Love Community church
           </td> -->
+          <!-- <td>Name</td>
+          <td>Service</td>
+          <td>Phone Number</td>
+          <td>City/Town</td>
+          <td>Booking Date</td> -->
         </tbody>
         <tfoot>
           <tr>
@@ -57,13 +77,11 @@
         </tfoot>
       </table>
     </div>
+    </div>
     <script src="./js/jquery.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.print.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdn.datatables.net/responsive/2.2.5/js/dataTables.responsive.min.js"></script>
     <script src="../firebase/config.js"></script>
 
     <script
@@ -73,20 +91,7 @@
     ></script>
     <script>
       $(document).ready(function () {
-        $("#example").DataTable({
-          responsive: true,
-          buttons: [
-            {
-              extend: "pdfHtml5",
-              text: "Save current page",
-              exportOptions: {
-                modifier: {
-                  page: "current",
-                },
-              },
-            },
-          ],
-        });
+        $("#example").DataTable();
       });
     </script>
     <script src="./js/admin.js"></script>
