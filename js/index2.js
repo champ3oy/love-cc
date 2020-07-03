@@ -30,7 +30,7 @@ reg2.addEventListener("submit", (event) => {
           firebase
             .database()
             .ref("Argon/week1")
-            .on("value", (snapshot) => {
+            .once("value", (snapshot) => {
               let array = [];
               snapshot.forEach((child) => {
                 if (child.toJSON().service === "second") {
