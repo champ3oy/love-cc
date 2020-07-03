@@ -42,10 +42,14 @@ reg3.addEventListener("submit", (event) => {
                 storageId,
                 JSON.stringify({ data: array.length })
               );
-              window.open(
-                "../screens/thank.html" + "?sid=" + storageId,
-                "_self"
-              );
+              if (array.length < 100) {
+                window.open(
+                  "../booking/thank.html" + "?sid=" + storageId,
+                  "_self"
+                );
+              } else {
+                alert("First Serive is currently full");
+              }
             });
         }
       }

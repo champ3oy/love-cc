@@ -35,17 +35,21 @@ reg1.addEventListener("submit", (event) => {
               snapshot.forEach((child) => {
                 if (child.toJSON().service === "first") {
                   array.push(child.toJSON());
-                }});
-              // document.getElementById("seat").innerHTML = array.length;
+                }
+              });
               var storageId = "parms" + String(Date.now());
               sessionStorage.setItem(
                 storageId,
                 JSON.stringify({ data: array.length })
               );
-              window.open(
-                "../screens/thank.html" + "?sid=" + storageId,
-                "_self"
-              );
+              if (array.length < 100) {
+                window.open(
+                  "../booking/thank.html" + "?sid=" + storageId,
+                  "_self"
+                );
+              } else {
+                alert("First Serive is currently full");
+              }
             });
         }
       }
