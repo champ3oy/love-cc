@@ -33,7 +33,9 @@ reg3.addEventListener("submit", (event) => {
             .on("value", (snapshot) => {
               let array = [];
               snapshot.forEach((child) => {
-                array.push(child.toJSON());
+                if (child.toJSON().service === "third") {
+                  array.push(child.toJSON());
+                }
               });
               var storageId = "parms" + String(Date.now());
               sessionStorage.setItem(
