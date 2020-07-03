@@ -22,7 +22,7 @@ window.addEventListener("load", () => {
 
       arr.map((item, index) => {
         $(".main").append(
-          ' <div class="cards-container"> <div class="card"> <div class="card-preview"> <h6>Love community church</h6> <h2>Service registration</h2> <a href="#">' +
+          ' <div class="cards-container"> <div class="card"> <div class="card-preview"> <h6>Love community church</h6> <h2>Service Name</h2> <a href="#">' +
             arrTime[index] +
             '<i class="fas fa-chevron-right"></i></a> </div> <div class="card-info"> <div class="progress-container"> <div class="progress"><div class="progressgreen" style="background-color: #2a265f; width: ' +
             (numbers[index] / 100) * 100 +
