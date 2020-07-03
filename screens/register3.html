@@ -6,23 +6,40 @@
     <title>Register</title>
     <link rel="stylesheet" href="../style/index.css" />
   </head>
-  <body style="height: 100vh;">
+  <body style="height: 100vh; overflow: hidden;">
     <nav>
+      <div>
       <a style="text-decoration: none; color: white;" href="../index.html"
         ><div class="brand">LOVE</div></a
       >
       <div class="nav">
         COMMUNITY CHURCH
       </div>
+    </div>
+    <div>
+      <img src="../assets/log.png" class='logo' />
+    </div>
     </nav>
+
     <div class="main">
       <!-- <p class="heading">Please select a service you'll like to attend.</p> -->
 
       <form name="reg3" method="GET" action="" id="reg3">
         <h3 class="head">Resgister for 3rd Service</h3>
-        <input class="input" placeholder="Full Name" />
-        <input class="input" placeholder="City/Town" />
-        <input type="tel" class="input" placeholder="Phone Number" />
+        <input required class="input" placeholder="Full Name" />
+        <input
+          required
+          type="text"
+          class="input"
+          placeholder="Place of residence"
+        />
+        <input
+          type="tel"
+          maxlength="10"
+          required
+          class="input"
+          placeholder="Phone Number"
+        />
         <button class="button" id="sub3">Submit</button>
       </form>
     </div>
