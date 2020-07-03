@@ -17,11 +17,14 @@ window.addEventListener("load", () => {
       });
 
       let arr = ["First", "Second", "Third"];
+      let arrTime = ["7:00 - 8:00 AM", "9:00 - 10:00 AM", "11:00 - 12:00 AM"];
       let numbers = [arrayF.length, arrayS.length, arrayT.length];
 
       arr.map((item, index) => {
         $(".main").append(
-          ' <div class="cards-container"> <div class="card"> <div class="card-preview"> <h6>Love community church</h6> <h2>Service registration</h2> <a href="#">9:00 - 10:00 AM <i class="fas fa-chevron-right"></i></a> </div> <div class="card-info"> <div class="progress-container"> <div class="progress"><div class="progressgreen" style="background-color: #2a265f; width: ' +
+          ' <div class="cards-container"> <div class="card"> <div class="card-preview"> <h6>Love community church</h6> <h2>Service registration</h2> <a href="#">' +
+            arrTime[index] +
+            '<i class="fas fa-chevron-right"></i></a> </div> <div class="card-info"> <div class="progress-container"> <div class="progress"><div class="progressgreen" style="background-color: #2a265f; width: ' +
             (numbers[index] / 100) * 100 +
             "%" +
             '; height: 5px; border-radius: 10px"></div></div> <span class="progress-text"> ' +
@@ -39,7 +42,5 @@ window.addEventListener("load", () => {
             "</div> </div> </div>"
         );
       });
-
-      
     });
 });
