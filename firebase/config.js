@@ -1,12 +1,13 @@
 const config = {
-  apiKey: "AIzaSyAPnfVd3XGLKXAEUtyWZHyVvLbq4Z7ye9Q",
-  authDomain: "cirlorm.firebaseapp.com",
-  databaseURL: "https://cirlorm.firebaseio.com",
-  projectId: "cirlorm",
-  storageBucket: "cirlorm.appspot.com",
-  messagingSenderId: "721846862511",
-  appId: "1:721846862511:web:242d14f1bf6536b2c6ca5a",
-  measurementId: "G-XGGSCTPKX3",
+  apiKey: "AIzaSyAt43UPvgUr4Pm1otCzSSovuihUFm8nE58",
+    authDomain: "love-cc-a4806.firebaseapp.com",
+    databaseURL: "https://love-cc-a4806.firebaseio.com",
+    projectId: "love-cc-a4806",
+    storageBucket: "love-cc-a4806.appspot.com",
+    messagingSenderId: "92556702093",
+    appId: "1:92556702093:web:955032aed84e655efc8dc4",
+    measurementId: "G-2LSNBCMB81"
+
 };
 
 firebase.initializeApp(config);

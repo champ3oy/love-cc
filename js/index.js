@@ -17,7 +17,7 @@ window.addEventListener("load", () => {
       });
 
       let arr = ["First", "Second", "Third"];
-      let arrTime = ["7:00 - 8:00 AM", "9:00 - 10:00 AM", "11:00 - 12:00 AM"];
+      let arrTime = ["7:00 - 8:00 AM", "9:00 - 10:00 AM", "11:00 - 12:00 PM"];
       let numbers = [arrayF.length, arrayS.length, arrayT.length];
 
       arr.map((item, index) => {
