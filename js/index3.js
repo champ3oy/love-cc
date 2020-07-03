@@ -35,8 +35,15 @@ reg3.addEventListener("submit", (event) => {
               snapshot.forEach((child) => {
                 array.push(child.toJSON());
               });
-              $("#seat").innerHTML = array.length;
-              window.open("../screens/thank.html", "_self");
+              var storageId = "parms" + String(Date.now());
+              sessionStorage.setItem(
+                storageId,
+                JSON.stringify({ data: array.length })
+              );
+              window.open(
+                "../screens/thank.html" + "?sid=" + storageId,
+                "_self"
+              );
             });
         }
       }
