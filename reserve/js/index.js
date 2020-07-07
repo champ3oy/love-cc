@@ -20,6 +20,8 @@ window.addEventListener("load", () => {
       let arrTime = ["7:00 - 8:00 AM", "9:00 - 10:00 AM", "11:00 - 12:00 PM"];
       let numbers = [arrayF.length, arrayS.length, arrayT.length];
 
+      document.getElementById('loading').style.display = 'none';
+
       arr.map((item, index) => {
         $(".main").append(
           ' <div class="cards-container"> <div class="card"> <div class="card-preview"> <h6>Love community church</h6> <h2 style="display: none">Service Name</h2> <a href="#">' +
