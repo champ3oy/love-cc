@@ -42,6 +42,7 @@ reg3.addEventListener("submit", (event) => {
                 phone: phone,
                 service: "third",
                 date: Date.now(),
+                seatNumber: array2.length + 2
               },
               (error) => {
                 if (error) {
