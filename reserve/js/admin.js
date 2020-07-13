@@ -1,7 +1,7 @@
 window.addEventListener("load", () => {
   firebase
     .database()
-    .ref("Argon/week2")
+    .ref("Argon/week3")
     .once("value", (snapshot) => {
       let array = [];
       snapshot.forEach((child) => {
@@ -33,7 +33,7 @@ function sortby(arg) {
   document.getElementById("tab").innerHTML = "";
   firebase
     .database()
-    .ref("Argon/week2")
+    .ref("Argon/week3")
     .once("value", (snapshot) => {
       let array = [];
       snapshot.forEach((child) => {
