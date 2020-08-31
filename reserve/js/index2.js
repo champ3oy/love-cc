@@ -20,7 +20,7 @@ reg2.addEventListener("submit", (event) => {
 
   firebase
     .database()
-    .ref("Argon/week8")
+    .ref("Argon/week9")
     .once("value", (snapshot) => {
       let array2 = [];
       snapshot.forEach((child) => {
@@ -32,7 +32,7 @@ reg2.addEventListener("submit", (event) => {
         ? run()
         : firebase
             .database()
-            .ref("Argon/week8")
+            .ref("Argon/week9")
             .push()
             .set(
               {
@@ -50,7 +50,7 @@ reg2.addEventListener("submit", (event) => {
                   document.getElementById("error").classList.add("show");
                   firebase
                     .database()
-                    .ref("Argon/week8")
+                    .ref("Argon/week9")
                     .once("value", (snapshot) => {
                       let array = [];
                       snapshot.forEach((child) => {
