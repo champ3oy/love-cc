@@ -1,7 +1,7 @@
 window.addEventListener("load", () => {
   firebase
     .database()
-    .ref("Argon/week9")
+    .ref("Argon/week10")
     .once("value", (snapshot) => {
       let arrayF = [];
       let arrayS = [];
