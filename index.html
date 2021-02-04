@@ -3,107 +3,93 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Love Community Chapel</title>
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./reserve/assets/log.png"
-    />
-    <link rel="stylesheet" href="./reserve/style/index.css" />
+    <title>UCC Remote Transcript</title>
+    <link rel="stylesheet" href="./style/index.css" />
   </head>
-  <body style="height: 100vh;">
-    <nav>
-      <div>
-        <a style="text-decoration: none; color: white;" href="index.html"
-          ><div class="brand">LOVE</div></a
-        >
-        <div class="nav">
-          COMMUNITY CHAPEL
-        </div>
-      </div>
-      <div>
-        <img src="./reserve/assets/log.png" class="logo" />
-      </div>
-    </nav>
-    <div
-      style="
-        width: 100%;
-        height: 80vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-      "
-    >
-      <p style="margin-bottom: 20px;">
-        We invite you to join us this Sunday at Love Community Chapel
-      </p>
-      <h1 style="font-size: 40px; font-weight: bold;" id="time">00:00:00</h1>
 
-      <a style="text-decoration: none;" href="./reserve/index.html">
-        <div
+  <body>
+    <div>
+      <div style="margin-bottom: 20px">
+        <!-- <img src="./assets/log.png" style="width: 55px" /> -->
+      </div>
+      <div style="margin-top: 70px; margin-bottom: 150px; text-align: center; width: 100%">
+        <h3
           style="
-            /* width: 120px; */
-            height: 50px;
-            background-color: #2a265f;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 15px;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-            padding: 15px;
-            border: solid white 1px;
-            border-radius: 5px;
-            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 50px;
+            line-height: 1.1em;
+            letter-spacing: -0.035em;
+            font-weight: 800;
+            font-family: Inter, sans-serif;
+            color: #212529;
           "
         >
-          RESERVE SEAT
-        </div>
-      </a>
+          UCC REMOTE TRANSCRIPT
+        </h3>
+        <h5
+          style="
+            color: lightgray;
+            margin-bottom: 30px;
+            font-weight: 400;
+            font-size: 20px;
+            width: 40%;
+            text-align: center;
+            width: 100%;
+          "
+        >
+          Request for your transcript online.
+        </h5>
+      </div>
     </div>
-
-    <script>
-      var countDownDate = new Date("Sep 13, 2020 00:00:01").getTime();
-      var x = setInterval(function () {
-        var now = new Date().getTime();
-
-        var distance = countDownDate - now;
-
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        document.getElementById("time").innerHTML =
-          days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-
-        if (distance < 0) {
-          clearInterval(x);
-          document.getElementById("time").innerHTML = "IT'S SUNDAY";
-        }
-      }, 1000);
-    </script>
-    <!-- Global Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-171589737-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "UA-171589737-1");
-    </script>
+    <div class="main">
+      <div class="cards-container">
+        <div class="card">
+          <div class="card-preview">
+            <h6>Transcript only</h6>
+            <h2 style="display: none">Remote Transcript</h2>
+            <a href="#"><i class="fas fa-chevron-right"></i></a>
+          </div>
+          <div class="card-info">
+            <div class="progress-container"></div>
+            <h6>service</h6>
+            <h2 class="see">Transcript Only</h2>
+            GHC 75.0
+            <a href="https://paystack.com/pay/remotetranscript"><button class="buyBtn">Continue</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="cards-container">
+        <div class="card">
+          <div class="card-preview">
+            <h6>English Proficiency</h6>
+            <h2 style="display: none">Remote Transcript</h2>
+            <a href="#"><i class="fas fa-chevron-right"></i></a>
+          </div>
+          <div class="card-info">
+            <div class="progress-container"></div>
+            <h6>service</h6>
+            <h2 class="see">English Proficiency</h2>
+            GHC 40.0
+            <a href="https://paystack.com/pay/remoteengproficiency"><button class="buyBtn">Continue</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="cards-container">
+        <div class="card">
+          <div class="card-preview">
+            <h6>Transcript and English Proficiency</h6>
+            <h2 style="display: none">Remote Transcript</h2>
+            <a href="#"><i class="fas fa-chevron-right"></i></a>
+          </div>
+          <div class="card-info">
+            <div class="progress-container"></div>
+            <h6>service</h6>
+            <h2 class="see">Transcript and English Proficiency</h2>
+            GHC 80.0
+            <a href="https://paystack.com/pay/remotetranscriptandenfproficiency"><button class="buyBtn">Continue</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
